@@ -19,22 +19,24 @@
 
 import React from 'react';
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card, CardText, CardBody,
+  CardHeader, CardSubtitle, Button, CardFooter
 } from 'reactstrap';
 
 const PeopleCard = (props) => {
   return (
     <div className="people-list" key={props.id}>
-      <Card>
+      <Card body inverse style={{ color: '#FFFFF', backgroundColor: '#333', borderColor: '#333' }}>
         {/* <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" /> */}
-        <CardBody>
-          <CardTitle>{props.name}</CardTitle>
+        <CardBody color='#FFFFF' margin='1%'>
+          <CardHeader>{props.name}</CardHeader>
           <CardSubtitle>Eye Color: {props.eye_color}</CardSubtitle>
           <CardSubtitle>Hair Color: {props.hair_color}</CardSubtitle>
           <CardText>Gender: {props.gender}</CardText>
-          <Button>Learn More</Button>
         </CardBody>
+        <CardFooter>
+            <Button color='danger'>Learn More</Button>
+        </CardFooter>
       </Card>
     </div>
   );
