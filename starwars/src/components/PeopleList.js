@@ -11,7 +11,7 @@ export default function PhotoList() {
             .get("https://swapi.co/api/people/")
             .then(response => {
                 console.log(response);
-                setPhotos(response.data);
+                setPersons(response.data.results);
             })
             .catch (error => {
                 console.log("This is not the API you are looking for...", error);
@@ -22,7 +22,7 @@ export default function PhotoList() {
         <div className="person">
             {persons.map(person => {
                 return (
-                    <PeopleCard key={person.id} name={person.name} homeworld={person.homeworld} species={person.species} films={person.films}/>
+                    <PeopleCard key={person.id} name={person.name} eye_color={person.eye_color} gender={person.gender} hair_color={person.hair_color}/>
                 ); 
             })}
         </div>

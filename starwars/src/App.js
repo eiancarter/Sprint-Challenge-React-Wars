@@ -1,6 +1,7 @@
 import React from 'react';
-import PeopleList from 'react';
+import PeopleList from './components/PeopleList';
 import './App.css';
+import { Button } from 'reactstrap';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
