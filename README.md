@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+A: ReactJS is a component based library, written in javascript, that makes it easier for developers to render objects to the DOM with different states that will update as data changes.
+
 - [ ] What does it mean to _think_ in react?
+
+A: Thinking in react basically means you follow this process to create your application: first you create a design mockup, then you think about the hierarchy of components that you plan to include, then you build the static version that renders but does not have interactivity, then you add in props and states that pass information between the components in the hierarchy, then you add in all the states the components will use to be interactive. 
 
 - [ ] Describe state.
 
+A: state is a changeable js object that holds information and is managed within the component. It will re-render the component asynchronously depending on the data passed in.
+
 - [ ] Describe props.
 
+A: props are immutable properties of a component (similar to arguments or parameters) that come from outside the component. They're immutable because once the component receives the props, they are not changed and the output should be the same as long as the props are the same. This differs from state. 
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+A: a side effect is something that affects something else outside the funciton being executed. pulling in data from the star wars api in this case was a side effect. we used the useeffect hook to manage the side effect of the api. 
 
 ## Project Set Up
 
